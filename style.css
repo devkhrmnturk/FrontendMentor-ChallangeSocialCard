@@ -1,0 +1,146 @@
+/* font */
+@font-face {
+    font-family: 'Inter';
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-weight: 400 700;
+}
+
+/* reset style basic */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* variable */
+:root {
+    /* color */
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --gray-700: hsl(0, 0%, 20%);
+    --gray-800: hsl(0, 0%, 12%);
+    --gray-900: hsl(0, 0%, 8%);
+
+    /* font-weight */
+    --inter-400: 400;
+    --inter-600: 600;
+    --inter-700: 700;
+}
+
+/* typography */
+
+h2 {
+    font-weight: var(--inter-600);
+}
+
+p { 
+    font-size: 0.875rem;
+    font-weight: var(--inter-400);
+}
+
+.card__link,.location {
+    font-size: 0.875rem;
+    font-weight: var(--inter-700);
+}
+
+/* Main style */
+body {
+    height: 100vh;
+    /* color-font style */
+    background-color: var(--gray-900);
+    color: var(--white);
+    font-family: 'Inter',sans-serif;
+
+    /* centering social-card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SOCIAL-CARD*/
+.social-card {
+    width: 375px;
+    background-color: var(--gray-800);
+
+    /* border-radius */
+    border-radius: 0.75rem; /*12px*/
+
+    /* spacing */
+    padding: 2.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    /* safe area for mobile */
+    margin: 1.25rem;
+
+    position: relative;
+}
+
+.profile-photo {
+    max-width: 86px;
+    border-radius: 50%;
+}
+
+/* CARD-HEADER */
+.social-card > header {
+    text-align: center;
+}
+
+.location {
+    margin-top:  0.625rem;
+    color: var(--green);
+}
+
+.career {
+    margin-top: 1.625rem;
+    opacity: 0.7;
+}
+
+/* CARD-ARTICLE  */
+.social-card__links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+/* the button itself */
+.card__link {
+    background-color: var(--gray-700);
+    padding: 0.85rem 0;
+    text-align: center;
+    border-radius: 0.5rem;
+    transition: all 350ms ease;
+}
+
+.card__link:active {
+    color: var(--gray-900);
+    background-color: var(--green);
+}
+
+/* responsiveness */
+@media (max-width:480px) {
+    .social-card {
+        max-width: 375px;
+        padding: 1.2rem;
+    }
+}
+
+/* attribution */
+.attribution { 
+    font-size: 11px; text-align: center; 
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+}
+.attribution a { color: var(--green); }
